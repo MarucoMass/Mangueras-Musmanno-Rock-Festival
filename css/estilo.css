@@ -97,7 +97,7 @@ header {
   position: relative;
   transition: 1s; }
   .contenedorGaleria__img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 1s;
     z-index: 1; }
 
