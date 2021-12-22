@@ -1,0 +1,17 @@
+{
+  "name": "mangueras-musmanno-rock-festival",
+  "version": "1.0.0",
+  "description": "proyecto final coder",
+  "main": "index.js",
+  "scripts": {
+    "test": "sass",
+    "build-css": "node-sass --include-path scss scss/estilo.scss css/estilo.css",
+		"watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "Mario Massonnat",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

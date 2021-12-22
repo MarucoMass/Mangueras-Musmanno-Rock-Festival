@@ -1,0 +1,143 @@
+$bg-main: #fff;
+$bg-footer: #000;
+$size-titulo: 3em;
+$size-sm: 1.5em;
+*{
+    margin: 0;
+    padding: 0;
+}
+/* estilo del header */
+header{
+    position: relative;
+    background-color: black;
+    color: #fff;
+    overflow: hidden;
+    width: 100%;
+    &::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 60%;
+    background-image: url(../img/publico.jpg);
+    background-repeat: no-repeat;
+    background-position-y: 36%;
+    background-size: cover;
+}   & .nav-link{
+    transition: 0.2s;
+   &:hover{
+    text-decoration: underline;
+    text-shadow: 2px 3px 0 $bg-footer; 
+    transition: 0.2s;
+    transform: scale(1.05);
+    } }  & .logo{
+    max-width: 250px;
+    animation: palpitacion 2s infinite linear;
+}   @keyframes palpitacion{
+    0% {
+        transform: scale(1);
+    } 
+    50% {
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+} 
+}
+
+/* estilo de slider */
+#slider{
+    width: 100%;
+    /* margin-top: 3rem; */
+    border: hidden;
+    overflow: hidden;
+    &__leyenda{
+        overflow: hidden;
+        /* height: 100%; */
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        animation-duration: 50s;
+        animation-name: slidein;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        text-shadow: -3px 3px 0 #83bcf6;
+        text-transform: uppercase;
+      }@keyframes slidein {
+        from {
+          margin-left: 100vw;
+        }
+        to {
+        margin-left: -5000px;
+        }
+      }
+}
+
+/* estilo del main */
+#main{
+    background-color: $bg-main;
+    box-shadow: inset 0 0px 100px  rgba(0,0,0,1);
+    padding-left: 0;
+    padding-right: 0;
+    &__box{
+        background-color: $bg-main;
+        h2{
+            font-size: $size-titulo;
+    }   span{
+            font-weight: 900;
+            text-shadow: -1px 1px 0 #83bcf6;
+    }   &__parrafo{
+        font-size: $size-sm;
+    }   & button{
+        font-size: $size-sm;
+    }   & ul li a{
+        font-size: $size-sm;
+    }   //estilo de la letra de la grilla//
+        & .carousel-item p{
+        font-size: $size-sm;
+    } 
+          }   
+}
+/* estilo de img page-mapa */
+.img-mapa{
+    width: 30%;
+    height: 30%;
+}
+/* estilo de page-galeria */
+.contenedorGaleria__img{
+    position: relative;
+    transition: 1s;
+    &:hover{
+        transform: scale(1.2);
+        transition: 1s;
+        z-index: 1;
+     }
+}
+ /* estilo de page-mapa */
+ .contenedorMapa__info ul li {
+     list-style: none;
+ }
+ /* img del footer */
+ footer{
+     background-color: $bg-footer;
+     & ul li img{
+         width: 27px;
+         height: 27px;
+        }
+        /* estilo de auspiciantes en footer */
+      & .auspiciantes{
+        margin-top: -6px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;  
+      & a img{
+        width: 12rem;
+        height: 8rem;
+        border-radius: 10%;
+        padding: 7px;
+     } 
+    }
+    }
