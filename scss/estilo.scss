@@ -1,11 +1,30 @@
-$bg-main: #fff;
-$bg-footer: #000;
+$color-btn: #fff;
+$color-hover: #000;
+$color-h3: #0d6efd;
 $size-titulo: 3em;
 $size-sm: 1.5em;
 *{
     margin: 0;
     padding: 0;
 }
+// map
+$colores:(
+	button: #0d6efd,
+	main: white,
+    footer: black,
+	);
+	
+	@each $valor, $color in $colores{
+		.fondo--#{$valor}{
+			background-color: $color;
+		}
+	}
+// mixin
+    @mixin sizes ($ancho, $alto){
+		width: $ancho;
+		height: $alto;
+	}
+
 /* estilo del header */
 header{
     position: relative;
@@ -18,8 +37,7 @@ header{
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    @include sizes(100%, 100%);
     opacity: 60%;
     background-image: url(../img/publico.jpg);
     background-repeat: no-repeat;
@@ -29,7 +47,7 @@ header{
     transition: 0.2s;
    &:hover{
     text-decoration: underline;
-    text-shadow: 2px 3px 0 $bg-footer; 
+    text-shadow: 2px 3px 0 $color-hover; 
     transition: 0.2s;
     transform: scale(1.05);
     } }  & .logo{
@@ -78,12 +96,11 @@ header{
 
 /* estilo del main */
 #main{
-    background-color: $bg-main;
+    // background-color: $bg-main;
     box-shadow: inset 0 0px 100px  rgba(0,0,0,1);
     padding-left: 0;
     padding-right: 0;
     &__box{
-        background-color: $bg-main;
         h2{
             font-size: $size-titulo;
     }   span{
@@ -91,6 +108,11 @@ header{
             text-shadow: -1px 1px 0 #83bcf6;
     }   &__parrafo{
         font-size: $size-sm;
+    }   & .artistas{
+        @extend #main__box__parrafo;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
     }   & button{
         font-size: $size-sm;
     }   & ul li a{
@@ -103,8 +125,7 @@ header{
 }
 /* estilo de img page-mapa */
 .img-mapa{
-    width: 30%;
-    height: 30%;
+    @include sizes(30%, 30%);
 }
 /* estilo de page-galeria */
 .contenedorGaleria__img{
@@ -120,12 +141,17 @@ header{
  .contenedorMapa__info ul li {
      list-style: none;
  }
- /* img del footer */
+ /* footer */
  footer{
-     background-color: $bg-footer;
-     & ul li img{
-         width: 27px;
-         height: 27px;
+     width: 100%;
+    & button{
+        transition: 0.2s;
+     &:hover{
+           opacity: 80%;
+           transition: 0.2s;
+       }
+   } & ul li img{
+       @include sizes(27px, 27px);
         }
         /* estilo de auspiciantes en footer */
       & .auspiciantes{
@@ -134,8 +160,7 @@ header{
         flex-wrap: wrap;
         justify-content: center;  
       & a img{
-        width: 12rem;
-        height: 8rem;
+        @include sizes(12rem, 8rem);  
         border-radius: 10%;
         padding: 7px;
      } 
