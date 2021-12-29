@@ -1,7 +1,8 @@
 $color-btn: #fff;
 $color-hover: #000;
 $color-h3: #0d6efd;
-$size-titulo: 3em;
+$size-titulo2: 3em;
+$size-titulo1: 4em;
 $size-sm: 1.5em;
 *{
     margin: 0;
@@ -82,16 +83,17 @@ header{
         animation-name: slidein;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        text-shadow: -3px 3px 0 #83bcf6;
-        text-transform: uppercase;
-      }@keyframes slidein {
-        from {
-          margin-left: 100vw;
-        }
-        to {
-        margin-left: -5000px;
-        }
-      }
+        h2{
+            font-size: $size-titulo2;
+            text-shadow: -3px 3px 0 #83bcf6;
+        } } @keyframes slidein {
+            from {
+                margin-left: 100vw;
+            }
+            to {
+                margin-left: -5000px;
+            }
+        }   
 }
 
 /* estilo del main */
@@ -100,13 +102,15 @@ header{
     box-shadow: inset 0 0px 100px  rgba(0,0,0,1);
     padding-left: 0;
     padding-right: 0;
-    &__box{
-        h2{
-            font-size: $size-titulo;
+      &__box{
+        h1{
+            font-size: $size-titulo1;
+    }   h2{
+        font-size: $size-titulo2 * 1.2;
     }   span{
-            font-weight: 900;
-            text-shadow: -1px 1px 0 #83bcf6;
-    }   &__parrafo{
+        font-weight: 900;
+        text-shadow: -1px 1px 0 #83bcf6;
+    }  &__parrafo{
         font-size: $size-sm;
     }   & .artistas{
         @extend #main__box__parrafo;
