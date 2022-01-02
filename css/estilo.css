@@ -66,7 +66,7 @@ header {
     animation-timing-function: linear;
     animation-iteration-count: infinite; }
     #slider__leyenda h2 {
-      font-size: 3em;
+      font-size: 2.2em;
       text-shadow: -3px 3px 0 #83bcf6; }
 
 @keyframes slidein {
@@ -81,9 +81,9 @@ header {
   padding-left: 0;
   padding-right: 0; }
   #main__box h1 {
-    font-size: 4em; }
+    font-size: 2.7rem; }
   #main__box h2 {
-    font-size: 3.6em; }
+    font-size: 2.64em; }
   #main__box span {
     font-weight: 900;
     text-shadow: -1px 1px 0 #83bcf6; }
