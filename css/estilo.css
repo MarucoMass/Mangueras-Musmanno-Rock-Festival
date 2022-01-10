@@ -66,7 +66,7 @@ header {
     animation-timing-function: linear;
     animation-iteration-count: infinite; }
     #slider__leyenda h2 {
-      font-size: 2.2em;
+      font-size: 2em;
       text-shadow: -3px 3px 0 #83bcf6; }
 
 @keyframes slidein {
@@ -81,24 +81,24 @@ header {
   padding-left: 0;
   padding-right: 0; }
   #main__box h1 {
-    font-size: 2.7rem; }
+    font-size: 2.3rem; }
   #main__box h2 {
-    font-size: 2.64em; }
+    font-size: 2em; }
   #main__box span {
     font-weight: 900;
     text-shadow: -1px 1px 0 #83bcf6; }
   #main__box__parrafo, #main__box .artistas {
-    font-size: 1.5em; }
+    font-size: 1.2em; }
   #main__box .artistas {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px; }
   #main__box button {
-    font-size: 1.5em; }
+    font-size: 1.2em; }
   #main__box ul li a {
-    font-size: 1.5em; }
+    font-size: 1.2em; }
   #main__box .carousel-item p {
-    font-size: 1.5em; }
+    font-size: 1.2em; }
 
 /* estilo de img page-mapa */
 .img-mapa {
@@ -122,6 +122,8 @@ header {
 footer {
   width: 100%;
   /* estilo de auspiciantes en footer */ }
+  footer h4 {
+    font-size: 1.2em; }
   footer button {
     transition: 0.2s; }
     footer button:hover {
