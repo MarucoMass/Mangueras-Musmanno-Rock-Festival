@@ -187,9 +187,14 @@ header{
             @include sizes(22px, 22px);
         }
     }
-    @media (max-width: 890px){
-        footer ul li img {
-            @include sizes(20px, 20px);
-        }
-    }
+    // @media (min-width: 769px){
+    //     footer ul li img {
+    //         @include sizes(20px, 20px);
+    //     }
+    // }
+    // @media (max-width: 321px){
+    //     footer ul li img {
+    //         @include sizes(22px, 22px);
+    //     }
+    // }
     
