@@ -156,6 +156,8 @@ header{
            opacity: 80%;
            transition: 0.2s;
        }
+   } & ul li:nth-child(-n+4){
+       margin-right: 0.5rem;
    } & ul li img{
        @include sizes(27px, 27px);
         }
@@ -176,18 +178,18 @@ header{
         header .logo {
             width: 200px;
         }
-        // footer ul li img {
-        //     @include sizes(18px, 18px);
-        // }
     }
     @media (max-width: 990px){
+        footer ul li:nth-child(-n+4) {
+            margin-right: 0.3rem;
+        }
         footer ul li img {
-            @include sizes(18px, 18px);
+            @include sizes(22px, 22px);
         }
     }
     @media (max-width: 890px){
         footer ul li img {
-            @include sizes(14px, 14px);
+            @include sizes(20px, 20px);
         }
     }
     
