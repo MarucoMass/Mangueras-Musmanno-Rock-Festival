@@ -105,6 +105,7 @@ header{
       &__box{
         h1{
             font-size: $size-titulo1;
+            // text-align: center;
     }   h2{
         font-size: $size-titulo2 * 1.2;
     }   span{
@@ -112,6 +113,7 @@ header{
         text-shadow: -1px 1px 0 #83bcf6;
     }  &__parrafo{
         font-size: $size-sm;
+        // text-align: center;
     }   & .artistas{
         @extend #main__box__parrafo;
         text-transform: uppercase;
@@ -170,3 +172,22 @@ header{
      } 
     }
     }
+    @media (max-width: 370px){
+        header .logo {
+            width: 200px;
+        }
+        // footer ul li img {
+        //     @include sizes(18px, 18px);
+        // }
+    }
+    @media (max-width: 990px){
+        footer ul li img {
+            @include sizes(18px, 18px);
+        }
+    }
+    @media (max-width: 890px){
+        footer ul li img {
+            @include sizes(14px, 14px);
+        }
+    }
+    

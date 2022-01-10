@@ -140,3 +140,17 @@ footer {
       height: 8rem;
       border-radius: 10%;
       padding: 7px; }
+
+@media (max-width: 370px) {
+  header .logo {
+    width: 200px; } }
+
+@media (max-width: 990px) {
+  footer ul li img {
+    width: 18px;
+    height: 18px; } }
+
+@media (max-width: 890px) {
+  footer ul li img {
+    width: 14px;
+    height: 14px; } }
